@@ -168,29 +168,29 @@ namespace TPWinforms
             // 
             this.lblNbComptes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.lblNbComptes.Name = "lblNbComptes";
-            this.lblNbComptes.Size = new System.Drawing.Size(134, 17);
-            this.lblNbComptes.Text = "Nombre de comptes: 12";
+            this.lblNbComptes.Size = new System.Drawing.Size(128, 17);
+            this.lblNbComptes.Text = "Nombre de comptes: 0";
             // 
             // lblNbActifs
             // 
             this.lblNbActifs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.lblNbActifs.Name = "lblNbActifs";
             this.lblNbActifs.Size = new System.Drawing.Size(98, 17);
-            this.lblNbActifs.Text = "Comptes actifs: 5";
+            this.lblNbActifs.Text = "Comptes actifs: 0";
             // 
             // lblNbGeles
             // 
             this.lblNbGeles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.lblNbGeles.Name = "lblNbGeles";
             this.lblNbGeles.Size = new System.Drawing.Size(97, 17);
-            this.lblNbGeles.Text = "Comptes gelés: 3";
+            this.lblNbGeles.Text = "Comptes gelés: 0";
             // 
             // lblNbFermes
             // 
             this.lblNbFermes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.lblNbFermes.Name = "lblNbFermes";
             this.lblNbFermes.Size = new System.Drawing.Size(106, 17);
-            this.lblNbFermes.Text = "Comptes fermés: 4";
+            this.lblNbFermes.Text = "Comptes fermés: 0";
             // 
             // btnAjouterCompte
             // 
