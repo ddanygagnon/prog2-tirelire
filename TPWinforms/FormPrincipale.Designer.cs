@@ -29,18 +29,18 @@ namespace TPWinforms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblNomBanque = new System.Windows.Forms.Label();
             this.listViewBanqueComptes = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblActifsTotal = new System.Windows.Forms.Label();
             this.lblActifsGele = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelNbComptes = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelNbActifs = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelNbGeles = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabelNbFermes = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.lblNbComptes = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblNbActifs = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblNbGeles = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblNbFermes = new System.Windows.Forms.ToolStripStatusLabel();
             this.btnAjouterCompte = new System.Windows.Forms.Button();
             this.btnVerserInterets = new System.Windows.Forms.Button();
             this.btnSupprimerCompte = new System.Windows.Forms.Button();
@@ -52,29 +52,33 @@ namespace TPWinforms
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrMiseFond)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNomBanque
             // 
-            this.label1.Font = new System.Drawing.Font("Helvetica LT Std", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(67)))));
-            this.label1.Location = new System.Drawing.Point(51, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(184, 85);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Jedi";
+            this.lblNomBanque.Font = new System.Drawing.Font("Helvetica LT Std", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNomBanque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(67)))));
+            this.lblNomBanque.Location = new System.Drawing.Point(51, 57);
+            this.lblNomBanque.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomBanque.Name = "lblNomBanque";
+            this.lblNomBanque.Size = new System.Drawing.Size(184, 85);
+            this.lblNomBanque.TabIndex = 0;
+            this.lblNomBanque.Text = "Jedi";
             // 
             // listViewBanqueComptes
             // 
-            this.listViewBanqueComptes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.listViewBanqueComptes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewBanqueComptes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.listViewBanqueComptes.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listViewBanqueComptes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(67)))));
+            this.listViewBanqueComptes.FullRowSelect = true;
+            this.listViewBanqueComptes.GridLines = true;
             this.listViewBanqueComptes.HideSelection = false;
             this.listViewBanqueComptes.Location = new System.Drawing.Point(51, 373);
             this.listViewBanqueComptes.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -115,7 +119,7 @@ namespace TPWinforms
             this.lblActifsTotal.Name = "lblActifsTotal";
             this.lblActifsTotal.Size = new System.Drawing.Size(203, 29);
             this.lblActifsTotal.TabIndex = 4;
-            this.lblActifsTotal.Text = "5 408,00 $";
+            this.lblActifsTotal.Text = "0,00 $";
             // 
             // lblActifsGele
             // 
@@ -126,7 +130,7 @@ namespace TPWinforms
             this.lblActifsGele.Name = "lblActifsGele";
             this.lblActifsGele.Size = new System.Drawing.Size(203, 29);
             this.lblActifsGele.TabIndex = 6;
-            this.lblActifsGele.Text = "1 926,00 $";
+            this.lblActifsGele.Text = "0,00 $";
             // 
             // groupBox1
             // 
@@ -145,48 +149,48 @@ namespace TPWinforms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actifs";
             // 
-            // statusStrip1
+            // statusStrip
             // 
-            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelNbComptes,
-            this.toolStripStatusLabelNbActifs,
-            this.toolStripStatusLabelNbGeles,
-            this.toolStripStatusLabelNbFermes});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 755);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(915, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip";
+            this.statusStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblNbComptes,
+            this.lblNbActifs,
+            this.lblNbGeles,
+            this.lblNbFermes});
+            this.statusStrip.Location = new System.Drawing.Point(0, 755);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.statusStrip.Size = new System.Drawing.Size(915, 22);
+            this.statusStrip.TabIndex = 8;
+            this.statusStrip.Text = "statusStrip";
             // 
-            // toolStripStatusLabelNbComptes
+            // lblNbComptes
             // 
-            this.toolStripStatusLabelNbComptes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.toolStripStatusLabelNbComptes.Name = "toolStripStatusLabelNbComptes";
-            this.toolStripStatusLabelNbComptes.Size = new System.Drawing.Size(134, 17);
-            this.toolStripStatusLabelNbComptes.Text = "Nombre de comptes: 12";
+            this.lblNbComptes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.lblNbComptes.Name = "lblNbComptes";
+            this.lblNbComptes.Size = new System.Drawing.Size(134, 17);
+            this.lblNbComptes.Text = "Nombre de comptes: 12";
             // 
-            // toolStripStatusLabelNbActifs
+            // lblNbActifs
             // 
-            this.toolStripStatusLabelNbActifs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.toolStripStatusLabelNbActifs.Name = "toolStripStatusLabelNbActifs";
-            this.toolStripStatusLabelNbActifs.Size = new System.Drawing.Size(98, 17);
-            this.toolStripStatusLabelNbActifs.Text = "Comptes actifs: 5";
+            this.lblNbActifs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.lblNbActifs.Name = "lblNbActifs";
+            this.lblNbActifs.Size = new System.Drawing.Size(98, 17);
+            this.lblNbActifs.Text = "Comptes actifs: 5";
             // 
-            // toolStripStatusLabelNbGeles
+            // lblNbGeles
             // 
-            this.toolStripStatusLabelNbGeles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.toolStripStatusLabelNbGeles.Name = "toolStripStatusLabelNbGeles";
-            this.toolStripStatusLabelNbGeles.Size = new System.Drawing.Size(97, 17);
-            this.toolStripStatusLabelNbGeles.Text = "Comptes gelés: 3";
+            this.lblNbGeles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.lblNbGeles.Name = "lblNbGeles";
+            this.lblNbGeles.Size = new System.Drawing.Size(97, 17);
+            this.lblNbGeles.Text = "Comptes gelés: 3";
             // 
-            // toolStripStatusLabelNbFermes
+            // lblNbFermes
             // 
-            this.toolStripStatusLabelNbFermes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.toolStripStatusLabelNbFermes.Name = "toolStripStatusLabelNbFermes";
-            this.toolStripStatusLabelNbFermes.Size = new System.Drawing.Size(106, 17);
-            this.toolStripStatusLabelNbFermes.Text = "Comptes fermés: 4";
+            this.lblNbFermes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.lblNbFermes.Name = "lblNbFermes";
+            this.lblNbFermes.Size = new System.Drawing.Size(106, 17);
+            this.lblNbFermes.Text = "Comptes fermés: 4";
             // 
             // btnAjouterCompte
             // 
@@ -224,6 +228,7 @@ namespace TPWinforms
             this.btnVerserInterets.TabIndex = 10;
             this.btnVerserInterets.Text = "Verser intérêts (2%)\r\n";
             this.btnVerserInterets.UseVisualStyleBackColor = false;
+            this.btnVerserInterets.Click += new System.EventHandler(this.btnVerserInterets_Click);
             // 
             // btnSupprimerCompte
             // 
@@ -286,7 +291,6 @@ namespace TPWinforms
             this.label4.Size = new System.Drawing.Size(120, 18);
             this.label4.TabIndex = 14;
             this.label4.Text = "Nom du titulaire";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // nmrMiseFond
             // 
@@ -343,18 +347,18 @@ namespace TPWinforms
             this.Controls.Add(this.btnSupprimerCompte);
             this.Controls.Add(this.btnVerserInterets);
             this.Controls.Add(this.btnAjouterCompte);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listViewBanqueComptes);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNomBanque);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MinimumSize = new System.Drawing.Size(912, 571);
             this.Name = "FormPrincipale";
             this.Text = "Dany Gagnon";
             this.groupBox1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nmrMiseFond)).EndInit();
@@ -377,12 +381,12 @@ namespace TPWinforms
 
         private System.Windows.Forms.Button btnAjouterCompte;
 
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbComptes;
+        private System.Windows.Forms.ToolStripStatusLabel lblNbComptes;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbActifs;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbGeles;
+        private System.Windows.Forms.ToolStripStatusLabel lvlNbGeles;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbFermes;
 
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip;
 
         private System.Windows.Forms.GroupBox groupBox1;
 
@@ -394,7 +398,7 @@ namespace TPWinforms
 
         private System.Windows.Forms.Label label2;
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNomBanque;
 
         #endregion
 
@@ -403,6 +407,9 @@ namespace TPWinforms
         private System.Windows.Forms.NumericUpDown nmrMiseFond;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ToolStripStatusLabel lblNbActifs;
+        private System.Windows.Forms.ToolStripStatusLabel lblNbGeles;
+        private System.Windows.Forms.ToolStripStatusLabel lblNbFermes;
     }
 }
 
