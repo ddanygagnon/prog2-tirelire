@@ -87,6 +87,7 @@ namespace TPWinforms
             this.listViewBanqueComptes.Size = new System.Drawing.Size(816, 335);
             this.listViewBanqueComptes.TabIndex = 1;
             this.listViewBanqueComptes.UseCompatibleStateImageBehavior = false;
+            this.listViewBanqueComptes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewBanqueComptes_ItemSelectionChanged);
             // 
             // label2
             // 
@@ -234,13 +235,14 @@ namespace TPWinforms
             // btnSupprimerCompte
             // 
             this.btnSupprimerCompte.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSupprimerCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(227)))), ((int)(((byte)(227)))));
+            this.btnSupprimerCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.btnSupprimerCompte.Enabled = false;
             this.btnSupprimerCompte.FlatAppearance.BorderSize = 0;
             this.btnSupprimerCompte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.btnSupprimerCompte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.btnSupprimerCompte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSupprimerCompte.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSupprimerCompte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(9)))), ((int)(((byte)(30)))));
+            this.btnSupprimerCompte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
             this.btnSupprimerCompte.Location = new System.Drawing.Point(51, 309);
             this.btnSupprimerCompte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSupprimerCompte.Name = "btnSupprimerCompte";
@@ -248,6 +250,7 @@ namespace TPWinforms
             this.btnSupprimerCompte.TabIndex = 11;
             this.btnSupprimerCompte.Text = "Supprimer le compte";
             this.btnSupprimerCompte.UseVisualStyleBackColor = false;
+            this.btnSupprimerCompte.Click += new System.EventHandler(this.btnSupprimerCompte_Click);
             // 
             // menuStrip
             // 

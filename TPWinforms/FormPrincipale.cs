@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 using BanqueLib;
@@ -89,6 +90,30 @@ namespace TPWinforms
 
             _ = this.banque.OuvrirCompte(titulaire, miseFond);
             this.Update();
+        }
+
+        private void btnSupprimerCompte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listViewBanqueComptes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            this.ToggleSupprimerBtn(this.btnSupprimerCompte, this.listViewBanqueComptes.SelectedItems.Count == 0);
+        }
+
+        private void ToggleSupprimerBtn(Button button, bool state)
+        {
+            button.Enabled = !state;
+
+            var backColor = Color.FromArgb(255, 227, 227);
+            var foreColor = Color.FromArgb(171, 9, 30);
+
+            var disabledBackColor = Color.FromArgb(200, 240, 244, 248);
+            var disabledForeColor = Color.FromArgb(100, 159, 179, 200);
+
+            button.BackColor = !state ? backColor : disabledBackColor;
+            button.ForeColor = !state ? foreColor : disabledForeColor;
         }
     }
 }
