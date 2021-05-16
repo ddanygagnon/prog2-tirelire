@@ -8,6 +8,7 @@ namespace TPWinforms
         public FormPrincipale()
         {
             this.InitializeComponent();
+
         }
     }
 }
