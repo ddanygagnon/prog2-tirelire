@@ -71,8 +71,8 @@ namespace TPWinforms
             // 
             // listViewBanqueComptes
             // 
-            this.listViewBanqueComptes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.listViewBanqueComptes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listViewBanqueComptes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.listViewBanqueComptes.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -216,13 +216,13 @@ namespace TPWinforms
             // btnVerserInterets
             // 
             this.btnVerserInterets.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnVerserInterets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.btnVerserInterets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(251)))), ((int)(((byte)(234)))));
             this.btnVerserInterets.FlatAppearance.BorderSize = 0;
-            this.btnVerserInterets.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(204)))), ((int)(((byte)(220)))));
-            this.btnVerserInterets.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(226)))), ((int)(((byte)(236)))));
+            this.btnVerserInterets.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(229)))), ((int)(((byte)(136)))));
+            this.btnVerserInterets.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(243)))), ((int)(((byte)(196)))));
             this.btnVerserInterets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerserInterets.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVerserInterets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
+            this.btnVerserInterets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(110)))), ((int)(((byte)(23)))));
             this.btnVerserInterets.Location = new System.Drawing.Point(702, 79);
             this.btnVerserInterets.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVerserInterets.Name = "btnVerserInterets";
@@ -274,6 +274,7 @@ namespace TPWinforms
             this.toolStripMenuItemReset.Name = "toolStripMenuItemReset";
             this.toolStripMenuItemReset.Size = new System.Drawing.Size(54, 23);
             this.toolStripMenuItemReset.Text = "Reset";
+            this.toolStripMenuItemReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtNomTitulaire
             // 

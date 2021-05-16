@@ -12,7 +12,7 @@ namespace TPWinforms
 {
     public partial class FormPrincipale : Form
     {
-        private readonly Banque banque;
+        private Banque banque;
 
         public FormPrincipale()
         {
@@ -35,8 +35,10 @@ namespace TPWinforms
             this.listViewBanqueComptes.Columns.Add("Solde", 200);
         }
 
-        private void Update()
+        private new void Update()
         {
+            this.banque = Instances.MesInstances.BanqueJedi;
+
             this.UpdateLabels();
             this.UpdateItems();
         }
@@ -92,19 +94,58 @@ namespace TPWinforms
             this.Update();
         }
 
+        private void btnReset_Click(object? sender, EventArgs e)
+        {
+            var reponse = MessageBox.Show(
+                $"Voulez-vous vraiment remettre à zéro la banque {this.banque.Nom}",
+                $"Remettre à zéro",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2
+            );
+
+            if (reponse != DialogResult.Yes)
+            {
+                return;
+            }
+
+            Instances.MesInstances = new Instances();
+
+            this.Update();
+        }
+
         private void btnSupprimerCompte_Click(object sender, EventArgs e)
         {
+            var noCompte = this.listViewBanqueComptes.SelectedItems[0].Text;
+            var reponse = MessageBox.Show(
+            $"Voulez-vous vraiment supprimer le compte no. {noCompte} ?",
+            $"Supprimer {this.listViewBanqueComptes.SelectedItems[0].SubItems[1].Text}",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning,
+                MessageBoxDefaultButton.Button2
+            );
 
+            if (reponse != DialogResult.Yes)
+            {
+                return;
+            }
+
+            this.banque.DétruireCompte(Convert.ToInt32(noCompte));
+
+            this.ToggleSupprimerBtn(this.btnSupprimerCompte, false);
+            this.Update();
         }
 
         private void listViewBanqueComptes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            this.ToggleSupprimerBtn(this.btnSupprimerCompte, this.listViewBanqueComptes.SelectedItems.Count == 0);
+            var estFermes = e.Item.SubItems[2].Text.Contains("Fermé");
+            Console.WriteLine(e.Item.SubItems[2].Text);
+            this.ToggleSupprimerBtn(this.btnSupprimerCompte, this.listViewBanqueComptes.SelectedItems.Count != 0 && estFermes);
         }
 
         private void ToggleSupprimerBtn(Button button, bool state)
         {
-            button.Enabled = !state;
+            button.Enabled = state;
 
             var backColor = Color.FromArgb(255, 227, 227);
             var foreColor = Color.FromArgb(171, 9, 30);
@@ -112,8 +153,8 @@ namespace TPWinforms
             var disabledBackColor = Color.FromArgb(200, 240, 244, 248);
             var disabledForeColor = Color.FromArgb(100, 159, 179, 200);
 
-            button.BackColor = !state ? backColor : disabledBackColor;
-            button.ForeColor = !state ? foreColor : disabledForeColor;
+            button.BackColor = state ? backColor : disabledBackColor;
+            button.ForeColor = state ? foreColor : disabledForeColor;
         }
     }
 }
