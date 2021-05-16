@@ -210,6 +210,7 @@ namespace TPWinforms
             this.btnAjouterCompte.TabIndex = 9;
             this.btnAjouterCompte.Text = "Ajouter un compte";
             this.btnAjouterCompte.UseVisualStyleBackColor = false;
+            this.btnAjouterCompte.Click += new System.EventHandler(this.btnAjouterCompte_Click);
             // 
             // btnVerserInterets
             // 
