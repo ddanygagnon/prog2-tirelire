@@ -29,6 +29,7 @@ namespace TPWinforms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipale));
             this.lblNomBanque = new System.Windows.Forms.Label();
             this.listViewBanqueComptes = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,12 +46,13 @@ namespace TPWinforms
             this.btnVerserInterets = new System.Windows.Forms.Button();
             this.btnSupprimerCompte = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItemReset = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemActions = new System.Windows.Forms.ToolStripMenuItem();
             this.txtNomTitulaire = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.nmrMiseFond = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.toolStripMenuItemReset = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
@@ -85,7 +87,7 @@ namespace TPWinforms
             this.listViewBanqueComptes.MultiSelect = false;
             this.listViewBanqueComptes.Name = "listViewBanqueComptes";
             this.listViewBanqueComptes.Size = new System.Drawing.Size(816, 335);
-            this.listViewBanqueComptes.TabIndex = 1;
+            this.listViewBanqueComptes.TabIndex = 7;
             this.listViewBanqueComptes.UseCompatibleStateImageBehavior = false;
             this.listViewBanqueComptes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listViewBanqueComptes_ItemSelectionChanged);
             // 
@@ -208,8 +210,8 @@ namespace TPWinforms
             this.btnAjouterCompte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAjouterCompte.Name = "btnAjouterCompte";
             this.btnAjouterCompte.Size = new System.Drawing.Size(224, 39);
-            this.btnAjouterCompte.TabIndex = 9;
-            this.btnAjouterCompte.Text = "Ajouter un compte";
+            this.btnAjouterCompte.TabIndex = 6;
+            this.btnAjouterCompte.Text = "&Ajouter un compte";
             this.btnAjouterCompte.UseVisualStyleBackColor = false;
             this.btnAjouterCompte.Click += new System.EventHandler(this.btnAjouterCompte_Click);
             // 
@@ -227,8 +229,8 @@ namespace TPWinforms
             this.btnVerserInterets.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVerserInterets.Name = "btnVerserInterets";
             this.btnVerserInterets.Size = new System.Drawing.Size(167, 39);
-            this.btnVerserInterets.TabIndex = 10;
-            this.btnVerserInterets.Text = "Verser intérêts (2%)\r\n";
+            this.btnVerserInterets.TabIndex = 2;
+            this.btnVerserInterets.Text = "&Verser intérêts (2%)\r\n";
             this.btnVerserInterets.UseVisualStyleBackColor = false;
             this.btnVerserInterets.Click += new System.EventHandler(this.btnVerserInterets_Click);
             // 
@@ -247,8 +249,8 @@ namespace TPWinforms
             this.btnSupprimerCompte.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSupprimerCompte.Name = "btnSupprimerCompte";
             this.btnSupprimerCompte.Size = new System.Drawing.Size(224, 39);
-            this.btnSupprimerCompte.TabIndex = 11;
-            this.btnSupprimerCompte.Text = "Supprimer le compte";
+            this.btnSupprimerCompte.TabIndex = 5;
+            this.btnSupprimerCompte.Text = "&Supprimer le compte";
             this.btnSupprimerCompte.UseVisualStyleBackColor = false;
             this.btnSupprimerCompte.Click += new System.EventHandler(this.btnSupprimerCompte_Click);
             // 
@@ -256,24 +258,27 @@ namespace TPWinforms
             // 
             this.menuStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(67)))));
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemReset});
+            this.toolStripMenuItemActions});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(915, 27);
-            this.menuStrip.TabIndex = 12;
+            this.menuStrip.TabIndex = 1;
+            this.menuStrip.TabStop = true;
             this.menuStrip.Text = "menuStrip1";
             // 
-            // toolStripMenuItemReset
+            // toolStripMenuItemActions
             // 
-            this.toolStripMenuItemReset.Checked = true;
-            this.toolStripMenuItemReset.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItemReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripMenuItemReset.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.toolStripMenuItemReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.toolStripMenuItemReset.Name = "toolStripMenuItemReset";
-            this.toolStripMenuItemReset.Size = new System.Drawing.Size(54, 23);
-            this.toolStripMenuItemReset.Text = "Reset";
+            this.toolStripMenuItemActions.Checked = true;
+            this.toolStripMenuItemActions.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItemActions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuItemActions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemReset});
+            this.toolStripMenuItemActions.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.toolStripMenuItemActions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.toolStripMenuItemActions.Name = "toolStripMenuItemActions";
+            this.toolStripMenuItemActions.Size = new System.Drawing.Size(60, 23);
+            this.toolStripMenuItemActions.Text = "A&ction";
             this.toolStripMenuItemReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // txtNomTitulaire
@@ -284,7 +289,7 @@ namespace TPWinforms
             this.txtNomTitulaire.Location = new System.Drawing.Point(180, 35);
             this.txtNomTitulaire.Name = "txtNomTitulaire";
             this.txtNomTitulaire.Size = new System.Drawing.Size(258, 27);
-            this.txtNomTitulaire.TabIndex = 13;
+            this.txtNomTitulaire.TabIndex = 3;
             // 
             // label4
             // 
@@ -312,7 +317,7 @@ namespace TPWinforms
             0});
             this.nmrMiseFond.Name = "nmrMiseFond";
             this.nmrMiseFond.Size = new System.Drawing.Size(258, 27);
-            this.nmrMiseFond.TabIndex = 16;
+            this.nmrMiseFond.TabIndex = 4;
             this.nmrMiseFond.ThousandsSeparator = true;
             // 
             // label5
@@ -342,6 +347,13 @@ namespace TPWinforms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ajouter";
             // 
+            // toolStripMenuItemReset
+            // 
+            this.toolStripMenuItemReset.Name = "toolStripMenuItemReset";
+            this.toolStripMenuItemReset.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.toolStripMenuItemReset.Size = new System.Drawing.Size(160, 24);
+            this.toolStripMenuItemReset.Text = "&Reset";
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -357,10 +369,12 @@ namespace TPWinforms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listViewBanqueComptes);
             this.Controls.Add(this.lblNomBanque);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MinimumSize = new System.Drawing.Size(912, 571);
+            this.MinimumSize = new System.Drawing.Size(930, 700);
             this.Name = "FormPrincipale";
             this.Text = "Dany Gagnon";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPrincipale_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
@@ -380,16 +394,13 @@ namespace TPWinforms
 
         private System.Windows.Forms.ListView listViewBanqueComptes;
 
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemReset;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemActions;
         private System.Windows.Forms.MenuStrip menuStrip;
 
 
         private System.Windows.Forms.Button btnAjouterCompte;
 
         private System.Windows.Forms.ToolStripStatusLabel lblNbComptes;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbActifs;
-        private System.Windows.Forms.ToolStripStatusLabel lvlNbGeles;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNbFermes;
 
         private System.Windows.Forms.StatusStrip statusStrip;
 
@@ -415,6 +426,7 @@ namespace TPWinforms
         private System.Windows.Forms.ToolStripStatusLabel lblNbActifs;
         private System.Windows.Forms.ToolStripStatusLabel lblNbGeles;
         private System.Windows.Forms.ToolStripStatusLabel lblNbFermes;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemReset;
     }
 }
 

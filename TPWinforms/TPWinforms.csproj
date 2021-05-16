@@ -4,6 +4,12 @@
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net5.0-windows</TargetFramework>
 		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>iconfinder_darth_vader_216968_Ktw_icon.ico</ApplicationIcon>
+		<Authors>Dany Gagnon</Authors>
+		<Company>Cégep Saint-Jean-sur-Richelieu</Company>
+		<Product>TP16 - Banque Jedi</Product>
+		<Description>Interface graphique pour la banque Jedi.</Description>
+		<Copyright>CC 4.0 by Dany Gagnon</Copyright>
 	</PropertyGroup>
 
 	<ItemGroup>

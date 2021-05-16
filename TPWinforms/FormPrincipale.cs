@@ -17,6 +17,7 @@ namespace TPWinforms
         public FormPrincipale()
         {
             this.InitializeComponent();
+            Persistance.Charger();
 
             this.banque = Instances.MesInstances.BanqueJedi;
 
@@ -91,13 +92,16 @@ namespace TPWinforms
             }
 
             _ = this.banque.OuvrirCompte(titulaire, miseFond);
+            this.txtNomTitulaire.Text = string.Empty;
+            this.nmrMiseFond.Value = 0;
+
             this.Update();
         }
 
-        private void btnReset_Click(object? sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
             var reponse = MessageBox.Show(
-                $"Voulez-vous vraiment remettre à zéro la banque {this.banque.Nom}",
+                $"Voulez-vous vraiment remettre à zéro la banque {this.banque.Nom}, pour retrouver les comptes initiaux ?",
                 $"Remettre à zéro",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning,
@@ -156,5 +160,7 @@ namespace TPWinforms
             button.BackColor = state ? backColor : disabledBackColor;
             button.ForeColor = state ? foreColor : disabledForeColor;
         }
+
+        private void FormPrincipale_FormClosed(object sender, FormClosedEventArgs e) => Persistance.Sauvegarder();
     }
 }
