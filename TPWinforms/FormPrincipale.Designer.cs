@@ -46,9 +46,16 @@ namespace TPWinforms
             this.btnSupprimerCompte = new System.Windows.Forms.Button();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemReset = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtNomTitulaire = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.nmrMiseFond = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrMiseFond)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +93,7 @@ namespace TPWinforms
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Total:";
+            this.label2.Text = "Total";
             // 
             // label3
             // 
@@ -97,7 +104,7 @@ namespace TPWinforms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Gelé:";
+            this.label3.Text = "Gelé";
             // 
             // lblActifsTotal
             // 
@@ -127,7 +134,7 @@ namespace TPWinforms
             this.groupBox1.Controls.Add(this.lblActifsGele);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Font = new System.Drawing.Font("Helvetica LT Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(125)))), ((int)(((byte)(152)))));
             this.groupBox1.Location = new System.Drawing.Point(51, 163);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -210,7 +217,7 @@ namespace TPWinforms
             this.btnVerserInterets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerserInterets.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnVerserInterets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(78)))), ((int)(((byte)(104)))));
-            this.btnVerserInterets.Location = new System.Drawing.Point(701, 249);
+            this.btnVerserInterets.Location = new System.Drawing.Point(702, 79);
             this.btnVerserInterets.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnVerserInterets.Name = "btnVerserInterets";
             this.btnVerserInterets.Size = new System.Drawing.Size(167, 39);
@@ -259,12 +266,80 @@ namespace TPWinforms
             this.toolStripMenuItemReset.Size = new System.Drawing.Size(54, 23);
             this.toolStripMenuItemReset.Text = "Reset";
             // 
+            // txtNomTitulaire
+            // 
+            this.txtNomTitulaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.txtNomTitulaire.Font = new System.Drawing.Font("Helvetica LT Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNomTitulaire.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(59)))), ((int)(((byte)(83)))));
+            this.txtNomTitulaire.Location = new System.Drawing.Point(180, 35);
+            this.txtNomTitulaire.Name = "txtNomTitulaire";
+            this.txtNomTitulaire.Size = new System.Drawing.Size(258, 27);
+            this.txtNomTitulaire.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Helvetica LT Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(125)))), ((int)(((byte)(152)))));
+            this.label4.Location = new System.Drawing.Point(27, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Nom du titulaire";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // nmrMiseFond
+            // 
+            this.nmrMiseFond.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.nmrMiseFond.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nmrMiseFond.DecimalPlaces = 2;
+            this.nmrMiseFond.Font = new System.Drawing.Font("Helvetica LT Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nmrMiseFond.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(59)))), ((int)(((byte)(83)))));
+            this.nmrMiseFond.Location = new System.Drawing.Point(180, 87);
+            this.nmrMiseFond.Maximum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nmrMiseFond.Name = "nmrMiseFond";
+            this.nmrMiseFond.Size = new System.Drawing.Size(258, 27);
+            this.nmrMiseFond.TabIndex = 16;
+            this.nmrMiseFond.ThousandsSeparator = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Helvetica LT Std", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(125)))), ((int)(((byte)(152)))));
+            this.label5.Location = new System.Drawing.Point(48, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 18);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Mise de fond";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtNomTitulaire);
+            this.groupBox2.Controls.Add(this.nmrMiseFond);
+            this.groupBox2.Font = new System.Drawing.Font("Helvetica LT Std", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(125)))), ((int)(((byte)(152)))));
+            this.groupBox2.Location = new System.Drawing.Point(407, 134);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(460, 144);
+            this.groupBox2.TabIndex = 18;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ajouter";
+            // 
             // FormPrincipale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(915, 777);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnSupprimerCompte);
             this.Controls.Add(this.btnVerserInterets);
             this.Controls.Add(this.btnAjouterCompte);
@@ -274,7 +349,7 @@ namespace TPWinforms
             this.Controls.Add(this.listViewBanqueComptes);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.MinimumSize = new System.Drawing.Size(581, 571);
+            this.MinimumSize = new System.Drawing.Size(912, 571);
             this.Name = "FormPrincipale";
             this.Text = "Dany Gagnon";
             this.groupBox1.ResumeLayout(false);
@@ -282,6 +357,9 @@ namespace TPWinforms
             this.statusStrip1.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrMiseFond)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,6 +397,12 @@ namespace TPWinforms
         private System.Windows.Forms.Label label1;
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtNomTitulaire;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown nmrMiseFond;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
